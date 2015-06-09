@@ -7,5 +7,8 @@ BOOKS INDEX
 <h3>Price: <%= book.price %></h3>
 <%= link_to 'Show', admin_book_path(book) %>
 <%= link_to 'Edit', edit_admin_book_path(book) %>
+<%= link_to 'Destroy', admin_book_path(book.id),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
 <% end %>
 
