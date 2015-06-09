@@ -5,6 +5,10 @@ BOOKS INDEX
 <h3>Author: <%= book.author %></h3>
 <h3>Upload Date: <%= book.upload_date %></h3>
 <h3>Price: <%= book.price %></h3>
+<%= link_to 'Show', admin_book_path(book) %>
 <%= link_to 'Edit', edit_admin_book_path(book) %>
+<%= link_to 'Destroy', admin_book_path(book.id),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
 <% end %>
 
