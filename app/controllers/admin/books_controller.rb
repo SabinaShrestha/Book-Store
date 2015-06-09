@@ -5,7 +5,7 @@ class Admin::BooksController < ApplicationController
   end
 
   def create
-    @book = Book.new
+    @book = Book.new(book_params)
     if @book.save
       redirect_to admin_books_path
     else
