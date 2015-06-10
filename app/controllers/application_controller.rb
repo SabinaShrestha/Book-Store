@@ -14,5 +14,6 @@ class ApplicationController < ActionController::Base
     unless session[:user_id].present? && current_user.present?
       flash[:alert] = "Sorry, you need to be logged in to make changes"
       redirect_to admin_login_path
+    end
   end
 end
