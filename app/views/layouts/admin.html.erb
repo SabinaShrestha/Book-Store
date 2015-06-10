@@ -8,11 +8,9 @@
 </head>
 <body>
 <%= link_to('Sign Up!', admin_signup_path) %>
-<%= link_to('Login', admin_login_path) %>
+<%= link_to('Login', login_path) %>
 
-<div class="flash-messages"></div>
-  <p><%= alert %></p>
-  <p><%= notice %></p>
+<%= render partial: 'layouts/flash' %>
 <%= yield %>
 
 </body>

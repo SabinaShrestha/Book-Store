@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
 
   namespace :admin do
-    get '/' => 'base#index'
+    get '/' => 'books#index'
     resources :books
   end
 
-  get 'admin/login' => 'admin/sessions#new'
-  post 'admin/login' => 'admin/sessions#create'
-  delete 'admin/logout' => 'admin/sessions#destroy'
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  delete '/logout' => 'sessions#destroy'
 
 
 
