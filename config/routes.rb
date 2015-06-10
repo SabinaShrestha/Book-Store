@@ -5,4 +5,7 @@ Rails.application.routes.draw do
     resources :books
   end
 
+  get '/admin/signup' => 'admin/users#new'
+  post 'admin/signup' => 'admin/users#create'
+
 end
