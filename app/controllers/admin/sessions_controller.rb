@@ -10,7 +10,7 @@ class Admin::SessionsController < ApplicationController
     if @user.present? && @user.authenticate(params[:password]) #the user exists and the pw is correct
       session[:user_id] = @user.id  # log the user in
       flash[:notice] = "Howdy #{@user.username}!"
-      redirect_to admin_path
+      redirect_to admin_books_path
     else
       flash[:alert] = 'Oops! You entered in the wrong username or password.'
       render :new   # something went horribly wrong
